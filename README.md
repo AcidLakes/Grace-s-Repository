@@ -6,7 +6,7 @@
 * Fully written application document
 * Fully written powerpoint presentation
 * Microsoft word document containing referances
-* 1/3 of wireframe implementation
+* 1/3 of wireframe 
 
 ## Technology used 
 * Unity 
