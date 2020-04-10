@@ -7,5 +7,6 @@
 * 1/3 of wireframe 
 
 ## Technology used 
-* Unity 
+* Unity V 2019.3.2f1
 * GitHub
+* GitHub Desktop
