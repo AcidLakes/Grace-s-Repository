@@ -67,7 +67,7 @@ public class testingBezier : MonoBehaviour
 
             // The car is in the air for 0.1 of a second
             // if longer, land on ground
-            if (seconds > 0.05)
+            if (seconds > 0.15)
             {
                 toggleSpline();
                 timer = 0;
@@ -90,13 +90,11 @@ public class testingBezier : MonoBehaviour
         {
             isBottomSpline = false;
             cachedTransform.position = Vector3.Lerp(cachedTransform.position, splineTop.GetPoint(progress), Time.deltaTime);
-            //Debug.Log("3 + isBottomSpline = " + isBottomSpline);
         }
         else
         {
             isBottomSpline = true;
             cachedTransform.position = Vector3.Lerp(cachedTransform.position, splineBottom.GetPoint(progress), Time.deltaTime);
-            //Debug.Log("4 + isBottomSpline = " + isBottomSpline);
         }
     }
 }
