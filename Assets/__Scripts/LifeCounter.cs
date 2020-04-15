@@ -6,9 +6,12 @@ public class LifeCounter : MonoBehaviour
 {
     // == private fields ==
     [SerializeField] private LifeIcon lifeIconPrefab; // coffee cup
-
+    //private Queue<LifeIcon> lives = new Queue<LifeIcon>();
+    private List<LifeIcon> lives = new List<LifeIcon>(12);
     private int startingLives;  // read from the Game Controller
     private GameController gc;
+
+    int hit = 0;
     void Start()
     {
         // get the GameController object
@@ -29,12 +32,22 @@ public class LifeCounter : MonoBehaviour
         // use a loop
         for (int i = 0; i < startingLives; i++)
         {
-            LifeIcon icon = Instantiate(lifeIconPrefab, transform);
+            lives.Add(Instantiate(lifeIconPrefab, transform));
+            //lives.Enqueue(Instantiate(lifeIconPrefab, transform));
         }
     }
 
-    private void updateLives()
+    public void updateLives()
     {
-        
+        hit++;
+        if (lives.Count > 0)
+        {
+            //lives.RemoveAt(0);
+            Destroy(lives[hit-1].gameObject);
+        }
+        if(lives.Count <= 0)
+        {
+            // load game Over scene
+        }
     }
 }
