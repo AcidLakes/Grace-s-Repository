@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Sound : MonoBehaviour
+public class SEManager : MonoBehaviour
 {
     public Slider Volume;
-    public AudioSource myMusic;
+    public AudioSource mySEMusic;
 
     // Update is called once per frame
     void Update()
     {
-        myMusic.volume=Volume.value;
+        mySEMusic.volume = Volume.value;
     }
 }
