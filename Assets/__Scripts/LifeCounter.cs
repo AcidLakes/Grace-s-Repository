@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Utilities;
 
 public class LifeCounter : MonoBehaviour
 {
     // == private fields ==
-    [SerializeField] private LifeIcon lifeIconPrefab; // coffee cup
+    [SerializeField] private LifeIcon lifeIconPrefab; 
     //private Queue<LifeIcon> lives = new Queue<LifeIcon>();
     private List<LifeIcon> lives = new List<LifeIcon>(12);
     private int startingLives;  // read from the Game Controller
@@ -40,14 +42,15 @@ public class LifeCounter : MonoBehaviour
     public void updateLives()
     {
         hit++;
-        if (lives.Count > 0)
+        if (hit<startingLives)
         {
             //lives.RemoveAt(0);
             Destroy(lives[hit-1].gameObject);
         }
-        if(lives.Count <= 0)
+        else
         {
             // load game Over scene
+            SceneManager.LoadSceneAsync(Names.GAMEOVER);
         }
     }
 }
