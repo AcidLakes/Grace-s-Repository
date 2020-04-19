@@ -4,6 +4,7 @@
 * Implementation of opening screen menu 
 * Implementation of level 3
 * Implementation of pause, help and win screens
+* Implementation of fully functional store
 * Fully written application document
 * Fully written powerpoint presentation
 * Microsoft word document containing referances of assets I used
