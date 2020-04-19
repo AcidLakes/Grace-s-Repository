@@ -1,14 +1,15 @@
 ## Arcitecture
 
 ## My work
-* Implementation of opening screen menu 
-* Implementation of level 3
-* Implementation of pause, help and win screens
-* Implementation of fully functional store
-* Fully written application document
-* Fully written powerpoint presentation
-* Microsoft word document containing referances of assets I used
-* 1/3 of team wireframe 
+* Wrote full documentation
+* Wrote full PowerPoint presentation
+*	Implementation of opening scene
+*	Implemented level 3
+*	Implementation of pause, help and win scenes
+*	Implementation of store scene
+*	Designed 1/3 of the wireframe
+*	Updated wireframe with each change to the application
+
 
 ## Technology used 
 * Unity V 2019.3.2f1
