@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using BezierSolution;
 using UnityEngine.Events;
-
 public class testingBezier : MonoBehaviour
 {
     private float seconds = 0;
@@ -58,7 +57,7 @@ public class testingBezier : MonoBehaviour
         {
             //timer used to determine how long the car has been in the air
             timer += Time.deltaTime;
-            seconds = timer % 50; // convert deltaTime to seconds
+            seconds = timer % 60; // convert deltaTime to seconds
 
             // position of car in air
             cachedTransform.position = Vector3.Lerp(cachedTransform.position, splineTop.GetPoint(progress), Time.deltaTime);
@@ -68,7 +67,7 @@ public class testingBezier : MonoBehaviour
 
             // The car is in the air for 0.1 of a second
             // if longer, land on ground
-            if (seconds > 0.60)
+            if (seconds > 0.15)
             {
                 toggleSpline();
                 timer = 0;
